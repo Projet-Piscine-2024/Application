@@ -13,7 +13,15 @@
     <div id="container">
         <h1>Gestion d'État de Piscine</h1>
 
-        <button id="monBouton">Cliquez pour afficher/supprimer l'image</button>
+        <form id="loginForm">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" id="loginButton">Connexion</button>
+        </form>
 
         <div id="conteneurImage">
             <!-- Ici, l'image sera ajoutée/détruite dynamiquement -->
