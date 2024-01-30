@@ -12,8 +12,8 @@ app.use(cors());
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',//admin
-  password: '',//piscine
+  user: 'admin',//admin
+  password: 'piscine',//piscine
   database: 'manage_pool'
 })
 db.connect((err) => {
