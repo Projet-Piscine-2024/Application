@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- main.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,30 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion d'État de Piscine</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
 
     <div id="container">
         <h1>Gestion d'État de Piscine</h1>
 
-        <form id="loginForm">
+        <form id="mainForm">
             <label for="username">Nom d'utilisateur:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Mot de passe:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="button" id="loginButton">Connexion</button>
+            <button type="button" onclick="login()">Se connecter</button>
+            <button type="button" onclick="createUser()">S'inscrire</button>
         </form>
-
-        <div id="conteneurImage">
-            <!-- Ici, l'image sera ajoutée/détruite dynamiquement -->
-            <img id="imageAffichee" src="assets/asterion.png" alt="Image" style="display: none;">
-        </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="/pages/main.js/main.js"></script>
 
 </body>
 </html>

@@ -1,9 +1,14 @@
-// login.js
+// main.js
 
 function login() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
+    if(!username || !password)
+    {
+        console.error('Veuillez remplir tous les champs.');
+        return;
+    }
     // Envoi des données au serveur pour la connexion
     fetch('http://localhost:3000/login', {
         method: 'POST',
@@ -26,7 +31,11 @@ function login() {
 function createUser() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-
+    if(!username || !password)
+    {
+        console.error('Veuillez remplir tous les champs.');
+        return;
+    }
     // Envoi des données au serveur pour la création d'utilisateur
     fetch('http://localhost:3000/createUser', {
         method: 'POST',
