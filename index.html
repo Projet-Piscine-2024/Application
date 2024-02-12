@@ -12,27 +12,16 @@
 </head>
 <body>
 
-    <div id="container">
-        <h1>Gestion d'État de Piscine</h1>
+    <div id="navbar">
+        <button onclick="showPage('accueil')">Accueil</button>
+        <button onclick="showPage('gestion')">Gestion</button>
+        <button onclick="showPage('compte')">Compte</button>
+    </div>
 
-        <form id="mainForm">
-            <label for="username">Nom d'utilisateur:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="button" onclick="login()">Se connecter</button>
-            <button type="button" onclick="createUser()">S'inscrire</button>
-        </form>
+    <div id="content">
+        <!-- Le contenu de la page sera affiché ici -->
     </div>
 
     <script src="/pages/main.js/main.js"></script>
-
-      
-    </div>
-
-  
-
 </body>
 </html>

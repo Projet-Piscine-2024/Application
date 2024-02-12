@@ -6,19 +6,32 @@ const app = express();
 const port = 3000;
 const bcrypt = require('bcrypt');
 const cors = require('cors');
+const https = require("https");
+
 app.use(express.json());
 app.use(express.static(__dirname)); // Servez statiquement le répertoire actuel
-app.use(cors());
+
+app.use(cors({
+ methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
+
+const server = https.createServer(
+{
+	key: fs.readFileSync('/etc/ssl/private/ssl-cert-snakeoil.key'),
+	cert: fs.readFileSync('/etc/ssl/certs/ssl-cert-snakeoil.pem'),
+},
+app
+);
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: '192.168.0.64',
   user: 'admin',//admin
   password: 'piscine',//piscine
   database: 'manage_pool'
 })
 db.connect((err) => {
   if(err){
-    console.error('Erreur de connexion à la base de données:',err);
+    console.error('Erreur de connexion à la base de données: ',err);
     return;
   }
   console.log('Connexion a la base de données réussie');
@@ -113,6 +126,6 @@ app.post('/createUser', (req, res) => {
 });
 
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
 });

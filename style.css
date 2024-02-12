@@ -1,0 +1,41 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /* Fixe la barre de navigation en haut */
+    top: 0; /* Aligne la barre de navigation au sommet de la page */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#content {
+    margin-top: 60px; /* Ajoute une marge en haut pour éviter que le contenu ne soit masqué par la barre de navigation */
+    text-align: center;
+}
