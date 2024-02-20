@@ -5,21 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion d'État de Piscine</title>
 
-    <link rel="stylesheet" href="/css/style.css"> <!-- Lien vers le fichier CSS -->
-
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
-
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div id="navbar">
-        <button onclick="showPage('accueil')">Accueil</button>
-        <button onclick="showPage('gestion')">Gestion</button>
-        <button onclick="showPage('compte')">Compte</button>
+        <a href="https://www.youtube.com/watch?v=oM9cKj7mk0A" class="logo-link">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+        </a>
+        <div class="nav-links">
+            <!-- Ajoutez ce bouton à votre fichier HTML -->
+
+
+            <a href="#" onclick="showPage('accueil')" class="nav-link">Accueil</a>
+            <a href="#" onclick="showPage('gestion')" class="nav-link">Gestion</a>
+            <a href="#" onclick="showPage('compte')" class="nav-link">Compte</a>
+        </div>
+        <div class="div"><button id="dark-mode-btn" onclick="toggleDarkMode()">Mode Sombre</button></div>
     </div>
 
     <div id="content">
-        <!-- Le contenu de la page sera affiché ici -->
+        <!-- Intégration des pages -->
+        <div id="accueil">
+            <!-- Contenu de la page d'accueil -->
+            <object type="text/html" data="/pages/accueil/accueil.html" style="width:100%; height:100%;"></object>
+        </div>
+        <div id="gestion" style="display:none;">
+            <!-- Contenu de la page de gestion -->
+            <object type="text/html" data="/pages/gestion/gestion.html" style="width:100%; height:100%;"></object>
+        </div>
+        <div id="compte" style="display:none;">
+            <!-- Contenu de la page de compte -->
+            <object type="text/html" data="/pages/compte/compte.html" style="width:100%; height:100%;"></object>
+        </div>
     </div>
 
     <script src="/pages/main.js/main.js"></script>

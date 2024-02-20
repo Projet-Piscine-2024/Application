@@ -1,23 +1,20 @@
 // main.js
 
-function showPage(pageName) {
-    // Récupère l'élément content
-    var content = document.getElementById('content');
+function showPage(page) {
+    // Masquer toutes les pages
+    document.getElementById('accueil').style.display = 'none';
+    document.getElementById('gestion').style.display = 'none';
+    document.getElementById('compte').style.display = 'none';
 
-    // Charge le contenu de la page en fonction du nom de la page
-    switch (pageName) {
-        case 'accueil':
-            content.innerHTML = '<h2>Page d\'Accueil</h2><p>Contenu de la page d\'accueil.</p>';
-            break;
-        case 'gestion':
-            content.innerHTML = '<h2>Page de Gestion</h2><p>Contenu de la page de gestion.</p>';
-            break;
-        case 'compte':
-            content.innerHTML = '<h2>Page de Compte</h2><p>Contenu de la page de compte.</p>';
-            break;
-        default:
-            content.innerHTML = ''; // Efface le contenu si le nom de la page n'est pas reconnu
-    }
+    // Afficher la page sélectionnée
+    document.getElementById(page).style.display = 'block';
+}
+
+// main.js
+
+// Ajoutez cette fonction pour basculer entre le mode normal et le mode sombre
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
 }
 
 function login() {

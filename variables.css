@@ -1,0 +1,25 @@
+/* variables.css */
+
+/* Couleurs pour le mode normal */
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --navbar-background: #47576d;
+    --navbar-text: #fff;
+    --button-background: #4caf50;
+    --button-hover-background: #45a049;
+}
+
+/* Couleurs pour le mode sombre */
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --link-color: #4bb5ff;
+    --link-hover-color: #008ae6;
+    --navbar-background: #47576d;
+    --navbar-text: #fff;
+    --button-background: #55c57a;
+    --button-hover-background: #4da866;
+}

@@ -15,17 +15,17 @@ app.use(cors({
  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
-const server = https.createServer(
+/*const server = https.createServer(
 {
 	key: fs.readFileSync('/etc/ssl/private/ssl-cert-snakeoil.key'),
 	cert: fs.readFileSync('/etc/ssl/certs/ssl-cert-snakeoil.pem'),
 },
 app
-);
+);*/
 
 const db = mysql.createConnection({
   host: '192.168.0.64',
-  user: 'admin',//admin
+  user: 'root',//admin
   password: 'piscine',//piscine
   database: 'manage_pool'
 })
@@ -126,6 +126,10 @@ app.post('/createUser', (req, res) => {
 });
 
 
-server.listen(port, () => {
+/*server.listen(port, () => {
+  console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
+});*/
+
+app.listen(port, () => {
   console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
 });
